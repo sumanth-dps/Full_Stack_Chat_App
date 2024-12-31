@@ -80,7 +80,7 @@ const MessageInput = () => {
           />
           <input
             type="file"
-            accept="image/png, image/jpeg, image/jpg"
+            accept="image/*"
             className="hidden"
             ref={fileInputRef}
             onChange={handleImageChange}
@@ -92,7 +92,7 @@ const MessageInput = () => {
                      ${imagePreview ? "text-emerald-500" : "text-zinc-400"}`}
             onClick={() => fileInputRef.current?.click()}
           >
-            <Image size={500} />
+            <Image />
           </button>
         </div>
         <button
@@ -100,7 +100,7 @@ const MessageInput = () => {
           className="btn btn-sm btn-circle"
           disabled={!text.trim() && !imagePreview}
         >
-          <Send size={1000} />
+          <Send />
         </button>
       </form>
     </div>
