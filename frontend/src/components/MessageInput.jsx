@@ -80,7 +80,7 @@ const MessageInput = () => {
           />
           <input
             type="file"
-            accept="image/*"
+            accept="image/png, image/jpeg, image/jpg"
             className="hidden"
             ref={fileInputRef}
             onChange={handleImageChange}
